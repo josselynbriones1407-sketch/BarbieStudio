@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARBIE STUDIO</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Fuentes: Poppins para texto y Dancing Script para el título elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- PUNTO DE ANCLA PARA EL INICIO (Al tope de la página) -->
+    <div id="inicio"></div>
 
     <header class="main-header">
         <div class="logo">
@@ -15,20 +19,23 @@
         </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
+                <!-- Enlaces configurados -->
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
         <section class="hero">
-            <h1>Bienvenido a Barbie Studio</h1>
+            <!-- Clase aplicada para la letra elegante -->
+            <h1 class="welcome-title">Bienvenido a Barbie Studio</h1>
             <p>Donde la belleza y el estilo se encuentran.</p>
         </section>
 
-        <section class="grid-content">
+        <!-- ID de Servicios -->
+        <section class="grid-content" id="servicios">
             <article class="card">
                 <div class="img-wrapper">
                     <img src="Cejas.jpg" alt="Cejas">
@@ -55,9 +62,10 @@
         </section>
     </main>
 
-    <footer class="main-footer">
+    <!-- ID de Contacto -->
+    <footer class="main-footer" id="contacto">
         <div class="footer-content">
-            <p class="social-title">SIGUENOS EN NUESTRAS REDES SOCIALES ✨👇🏻</p>
+            <p class="social-title">SÍGUENOS EN NUESTRAS REDES SOCIALES ✨👇🏻</p>
             <ul class="social-links">
                 <li><strong>FACEBOOK:</strong> Barbie studioo</li>
                 <li><strong>INSTAGRAM:</strong> @Barbiestudio.s</li>
