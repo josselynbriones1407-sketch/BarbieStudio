@@ -1,11 +1,13 @@
-/* Configuración básica */
+/* =========================
+   CONFIGURACIÓN BÁSICA
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* EFECTO DE DESPLAZAMIENTO SUAVE */
+/* Desplazamiento suave */
 html {
     scroll-behavior: smooth;
 }
@@ -14,52 +16,79 @@ html {
     --barbie-pink: #E0218A;
     --soft-pink: #FADADD;
     --white: #ffffff;
-    --tornasol: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 20%, #fad0c4 40%, #fbc2eb 60%, #a18cd1 80%, #ff9a9e 100%);
+
+    --tornasol: linear-gradient(
+        45deg,
+        #ff9a9e 0%,
+        #fad0c4 20%,
+        #fad0c4 40%,
+        #fbc2eb 60%,
+        #a18cd1 80%,
+        #ff9a9e 100%
+    );
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #444;
-    background-color: #fffafa; 
+    background-color: #fffafa;
 }
 
-/* --- AJUSTE DE NAVEGACIÓN --- */
-/* Esto evita que el header fijo tape el contenido al hacer clic en los enlaces */
-#servicios, #contacto, #inicio {
-    scroll-margin-top: 90px; 
+/* =========================
+   AJUSTE DE NAVEGACIÓN
+========================= */
+#servicios,
+#contacto,
+#inicio {
+    scroll-margin-top: 90px;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 .main-header {
     background: var(--barbie-pink);
     color: white;
     padding: 1rem 5%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    /* Mantenemos el menú fijo arriba */
+
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* Logo */
 .logo img {
-    height: 60px; 
+    height: 60px;
     filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
 }
 
+/* =========================
+   MENÚ RESPONSIVE
+========================= */
 .nav-menu ul {
     list-style: none;
+
     display: flex;
-    gap: 25px;
+    flex-wrap: wrap; /* 👈 permite bajar líneas */
+    justify-content: center;
+
+    gap: 15px;
+    padding: 0;
 }
 
 .nav-menu a {
     color: white;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1rem;
+
     transition: 0.3s;
 }
 
@@ -67,48 +96,61 @@ body {
     color: var(--soft-pink);
 }
 
-/* Hero Section */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
     text-align: center;
     padding: 80px 20px;
+
     background: var(--soft-pink);
     border-radius: 20px;
     margin-top: 20px;
+
     color: var(--barbie-pink);
 }
 
-/* LETRA ELEGANTE Y BONITA */
+/* Título elegante */
 .welcome-title {
-    font-family: 'Dancing Script', cursive; /* Fuente elegante tipo manuscrita */
-    font-size: 5rem; /* Un poco más grande para destacar */
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+
     margin-bottom: 10px;
-    text-transform: none; 
     letter-spacing: 1px;
-    /* Un toque de sombra suave para profundidad */
+
     text-shadow: 2px 2px 4px rgba(224, 33, 138, 0.2);
 }
 
-/* Contenedor principal */
+/* =========================
+   CONTENEDOR
+========================= */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Grid de servicios */
+/* =========================
+   GRID DE SERVICIOS
+========================= */
 .grid-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
+
     margin-top: 40px;
 }
 
+/* Tarjetas */
 .card {
     background: white;
     padding: 20px;
+
     text-align: center;
+
     border-radius: 15px;
     border: 1px solid var(--soft-pink);
+
     transition: transform 0.3s ease;
 }
 
@@ -116,27 +158,43 @@ body {
     transform: translateY(-10px);
 }
 
-/* Efecto Tornasolado en Imágenes */
+/* =========================
+   EFECTO TORNASOL
+========================= */
 .img-wrapper {
     position: relative;
-    padding: 5px; 
+
+    padding: 5px;
+
     background: var(--tornasol);
     background-size: 200% 200%;
+
     animation: rainbow 3s linear infinite;
+
     border-radius: 12px;
     margin-bottom: 15px;
+
     line-height: 0;
 }
 
 @keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .img-wrapper img {
     width: 100%;
     height: 250px;
+
     object-fit: cover;
     border-radius: 8px;
 }
@@ -146,11 +204,15 @@ body {
     margin-bottom: 10px;
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 .main-footer {
     background: var(--barbie-pink);
     color: white;
+
     text-align: center;
+
     padding: 4rem 1rem;
     margin-top: 60px;
 }
@@ -158,6 +220,7 @@ body {
 .social-title {
     font-weight: 600;
     font-size: 1.2rem;
+
     margin-bottom: 20px;
 }
 
@@ -166,18 +229,45 @@ body {
     line-height: 2;
 }
 
-/* --- Media Queries --- */
+/* =========================
+   RESPONSIVE MÓVIL
+========================= */
 @media (max-width: 767px) {
+
     .main-header {
         flex-direction: column;
         gap: 15px;
+
+        padding: 1rem;
     }
+
+    .nav-menu ul {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+
     .welcome-title {
-        font-size: 3rem; /* Tamaño ajustable para móvil */
+        font-size: 3rem;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .img-wrapper img {
+        height: 220px;
     }
 }
 
+/* =========================
+   TABLET Y PC
+========================= */
 @media (min-width: 768px) {
+
     .grid-content {
         grid-template-columns: repeat(3, 1fr);
     }
