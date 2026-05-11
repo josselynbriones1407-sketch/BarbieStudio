@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <!-- ESTA LÍNEA ACTIVA EL RESPONSIVE EN TODA LA WEB -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>BARBIE STUDIO</title>
+
     <link rel="stylesheet" href="styles.css">
-    <!-- Fuentes: Poppins para texto y Dancing Script para el título elegante -->
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- PUNTO DE ANCLA PARA EL INICIO (Al tope de la página) -->
+    <!-- INICIO -->
     <div id="inicio"></div>
 
+    <!-- HEADER -->
     <header class="main-header">
+
         <div class="logo">
             <img src="Logo Barbie.jpg" alt="Barbie Studio Logo">
         </div>
-        <nav class="nav-menu">
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+
+        <!-- MENÚ -->
+        <nav class="nav-menu" id="nav-menu">
+
             <ul>
-                <!-- Menu -->
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#contacto1">Contacto1</a></li>
-                <li><a href="#contacto2">Contacto2</a></li>
-                <li><a href="#contacto3">Contacto3</a></li>
-                <li><a href="#contacto4">Contacto4</a></li>
+                <li><a href="#contacto">Facebook</a></li>
+                <li><a href="#contacto2">Instagram</a></li>
+                <li><a href="#contacto3">WhatsApp</a></li>
             </ul>
+
         </nav>
+
     </header>
 
+    <!-- CONTENIDO -->
     <main class="container">
+
         <section class="hero">
-            <!-- Clase aplicada para la letra elegante -->
-            <h1 class="welcome-title">Bienvenido a Barbie Studio</h1>
+
+            <h1 class="welcome-title">
+                Bienvenido a Barbie Studio
+            </h1>
+
             <p>Donde la belleza y el estilo se encuentran.</p>
+
         </section>
 
-        <!-- ID de Servicios -->
+        <!-- SERVICIOS -->
         <section class="grid-content" id="servicios">
+
             <article class="card">
                 <div class="img-wrapper">
                     <img src="Cejas.jpg" alt="Cejas">
@@ -64,20 +82,68 @@
                 <h3>Pedicure</h3>
                 <p>Cuidado y relajación para tus pies.</p>
             </article>
+
         </section>
+
+        <!-- CONTACTOS -->
+        <section class="contact-section" id="contacto">
+            <h2>Facebook</h2>
+            <p>Barbie Studio Oficial</p>
+        </section>
+
+        <section class="contact-section" id="contacto2">
+            <h2>Instagram</h2>
+            <p>@Barbiestudio.s</p>
+        </section>
+
+        <section class="contact-section" id="contacto3">
+            <h2>WhatsApp</h2>
+            <p>935-407-647</p>
+        </section>
+
     </main>
 
-    <!-- ID de Contacto -->
-    <footer class="main-footer" id="contacto">
+    <!-- FOOTER -->
+    <footer class="main-footer">
+
         <div class="footer-content">
-            <p class="social-title">SÍGUENOS EN NUESTRAS REDES SOCIALES ✨👇🏻</p>
+
+            <p class="social-title">
+                SÍGUENOS EN NUESTRAS REDES SOCIALES ✨👇🏻
+            </p>
+
             <ul class="social-links">
+
                 <li><strong>FACEBOOK:</strong> Barbie studioo</li>
                 <li><strong>INSTAGRAM:</strong> @Barbiestudio.s</li>
                 <li><strong>WHATSAPP:</strong> 935-407-647</li>
+
             </ul>
+
         </div>
+
     </footer>
 
+    <!-- JAVASCRIPT MENÚ -->
+    <script>
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const navMenu = document.getElementById("nav-menu");
+
+        // abrir / cerrar menú
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+        // cerrar menú al hacer click en un enlace
+        document.querySelectorAll(".nav-menu a").forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("active");
+            });
+        });
+
+    </script>
+
 </body>
+
 </html>
